@@ -1,0 +1,5 @@
+menuconfig DRIVERS_DISTANCE_SENSOR_DFROBOT_SEN0648
+	bool "dfrobot_sen0648"
+	default n
+	---help---
+		Enable support for DFRobot SEN0648 (TOFSense-F) I2C TOF laser rangefinder.
