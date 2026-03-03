@@ -1,0 +1,85 @@
+#!/bin/sh
+#
+# @name The DAAWG
+#
+# @type Standard VTOL
+# @class VTOL
+# @maintainer Oskar Fjørtoft
+
+# @board px4_fmu-v2 exclude
+# @board bitcraze_crazyflie exclude
+# @board holybro_kakutef7 exclude
+#
+
+. ${R}etc/init.d/rc.vtol_defaults
+
+param set-default CA_AIRFRAME 2
+param set-default CA_ROTOR_COUNT 5
+
+# PUSHER #
+param set-default CA_ROTOR4_AX 1
+param set-default CA_ROTOR4_AY 0
+param set-default CA_ROTOR4_AZ 0
+
+param set-default CA_ROTOR4_PX -0.5
+param set-default CA_ROTOR4_PY 0
+param set-default CA_ROTOR4_PZ 0
+
+param set-default CA_SV_CS_COUNT 4
+
+# WINGS #
+
+# Left
+param set-default CA_SV_CS0_TYPE 1
+param set-default CA_SV_CS0_TRQ_R -0.5
+
+# Right
+param set-default CA_SV_CS1_TYPE 1
+param set-default CA_SV_CS1_TRQ_R 0.5
+
+
+# TAIL #
+
+# Left
+param set-default CA_SV_CS2_TYPE 3
+param set-default CA_SV_CS2_TRQ_P 0.7
+param set-default CA_SV_CS2_TRQ_Y 0.7
+
+# Right
+param set-default CA_SV_CS3_TYPE 3
+param set-default CA_SV_CS3_TRQ_P 0.7
+param set-default CA_SV_CS3_TRQ_Y -0.7
+
+param set-default VT_TYPE 2
+param set-default MAV_TYPE 22
+
+# Square quadrotor X PX4 numbering
+param set-default CA_ROTOR0_PX 1
+param set-default CA_ROTOR0_PY 1
+
+param set-default CA_ROTOR1_PX -1
+param set-default CA_ROTOR1_PY -1
+
+param set-default CA_ROTOR2_PX 1
+param set-default CA_ROTOR2_PY -1
+param set-default CA_ROTOR2_KM -0.05
+
+param set-default CA_ROTOR3_PX -1
+param set-default CA_ROTOR3_PY 1
+param set-default CA_ROTOR3_KM -0.05
+
+# STANDARD PORTS #
+# MAIN Ports 1-4: Lift Motors
+param set-default PWM_MAIN_FUNC1 101 # Motor 1 (Front Right)
+param set-default PWM_MAIN_FUNC2 102 # Motor 2 (Back Left)
+param set-default PWM_MAIN_FUNC3 103 # Motor 3 (Front Left)
+param set-default PWM_MAIN_FUNC4 104 # Motor 4 (Back Right)
+
+# MAIN Port 5: Pusher Motor
+param set-default PWM_MAIN_FUNC5 105 # Motor 5 (Pusher)
+
+# AUX Ports 1-4: Control Surfaces
+param set-default PWM_AUX_FUNC1 201  # CS0 (Left Aileron)
+param set-default PWM_AUX_FUNC2 202  # CS1 (Right Aileron)
+param set-default PWM_AUX_FUNC3 203  # CS2 (Left A-Tail)
+param set-default PWM_AUX_FUNC4 204  # CS3 (Right A-Tail)

@@ -133,6 +133,7 @@ if(CONFIG_MODULES_VTOL_ATT_CONTROL)
 		13014_vtol_babyshark
 		13030_generic_vtol_quad_tiltrotor
 		13200_generic_vtol_tailsitter
+		13500_daawg_atail_vtol
 	)
 endif()
 
