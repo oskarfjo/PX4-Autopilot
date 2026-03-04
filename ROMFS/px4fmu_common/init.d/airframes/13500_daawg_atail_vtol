@@ -4,8 +4,18 @@
 #
 # @type Standard VTOL
 # @class VTOL
-# @maintainer Oskar Fjørtoft
-
+# @maintainer Oskar Fjortoft
+#
+# @output MAIN1 motor 1
+# @output MAIN2 motor 2
+# @output MAIN3 motor 3
+# @output MAIN4 motor 4
+# @output MAIN5 motor 5
+# @output AUX1 aileron
+# @output AUX2 aileron
+# @output AUX3 v-tail
+# @output AUX4 v-tail
+#
 # @board px4_fmu-v2 exclude
 # @board bitcraze_crazyflie exclude
 # @board holybro_kakutef7 exclude
